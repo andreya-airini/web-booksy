@@ -1,0 +1,177 @@
+.events-section {
+    background-color: #FCEEE6;
+    padding: 64px 0;
+    margin: 0;
+}
+
+.container {
+    margin: 0;
+}
+
+.events {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.events-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.events-description {
+    font-size: 18px;
+    margin-bottom: 24px;
+    max-width: 560px;
+}
+
+
+.events-list {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+    
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+
+    width: 100%;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .swiper-slide {
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
+
+    .slider-controls {
+        display: flex;
+    }
+
+    .container {
+        max-width: 1024px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .events-list {
+        overflow: visible;
+        flex-wrap: nowrap;
+    }
+
+    .swiper-slide {
+        flex: 0 0 calc((100% - 48px) / 3);
+    }
+
+    .slider-controls {
+        display: none;
+    }
+
+    .events-title {
+        font-size: 48px;
+    }
+}
+
+
+.event-img {
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.event-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.event-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+}
+
+.event-meta {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.event-text {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.event-btn {
+    background: none;
+    border: none;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    padding: 0;
+
+
+}
+
+.event-btn .arrow {
+    margin-left: 4px;
+}
+
+
+.slider-controls {
+    display: flex;
+    margin-top: 32px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.swiper-pagination {
+    display: flex;
+    gap: 8px;
+    background-color: #0B0500;
+}
+
+
+.arrows {
+    display: flex;
+    gap: 16px;
+}
+
+.arrow-btn {
+    background: #f45b0f;
+    padding: 12px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.arrow-btn:hover,
+.arrow-btn:focus {
+    background: #FCEEE6;
+    color: #000;
+}
+
+.arrow-btn:active {
+    background:#5A2502
+}
+
+.arrow-btn:disabled {
+    opacity: 0.2;
+}
