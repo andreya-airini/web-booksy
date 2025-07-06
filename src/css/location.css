@@ -16,7 +16,6 @@
     font-size: 16px;
     line-height: 1.5;
     text-transform: capitalize;
-    color: #0b0500;
 }
 
 .loc-title {
@@ -24,7 +23,6 @@
     font-size: 48px;
     line-height: 1.2;
     letter-spacing: -0.01em;
-    color: #0b0500;
     padding: 16px 0 24px 0;
 }
 
@@ -32,7 +30,6 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
-    color: #0b0500;
 }
 
 .loc-address-group {
@@ -42,7 +39,6 @@
 }
 
 .loc-svg {
-    fill: #0b0500;
     width: 24px;
     height: 24px;
 }
@@ -58,7 +54,6 @@
     font-size: 20px;
     line-height: 1.4;
     letter-spacing: -0.01em;
-    color: #0b0500;
     margin: 0;
     font-style: normal;
 }
@@ -69,7 +64,6 @@
     line-height: 1.5;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: #0b0500;
     cursor: pointer;
     font-style: normal;
 }
@@ -82,7 +76,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    color: #0b0500;
     font-style: normal;
 }
 
