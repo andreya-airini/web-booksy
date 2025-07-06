@@ -14,7 +14,7 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.feedback .swiper-pagination',
     type: 'bullets',        
     clickable: true,         
     bulletClass: 'custom-bullet',          
