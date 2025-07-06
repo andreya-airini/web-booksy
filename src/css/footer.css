@@ -13,6 +13,10 @@
 }
 .logo {
   margin-bottom: 32px;
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 .footer-nav {
