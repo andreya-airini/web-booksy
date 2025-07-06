@@ -20,17 +20,17 @@
 }
 
 .footer-nav {
+  margin-bottom: 32px;
+}
+.footer-nav-list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 32px;
-  margin-bottom: 32px;
-}
-.footer-nav a {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
 }
 
 .join-section-title {
@@ -98,7 +98,7 @@
     justify-content: flex-start;
     flex-direction: column;
   }
-  .footer-nav {
+  .footer-nav-list {
     flex-direction: row;
   }
 }
@@ -112,8 +112,5 @@
   .logo {
     display: flex;
     justify-content: flex-start;
-  }
-  .footer-nav {
-    flex-direction: row;
   }
 }
