@@ -41,6 +41,7 @@
 .loc-svg {
     width: 24px;
     height: 24px;
+    margin-right: 16px;
 }
 
 .loc-item {
@@ -49,6 +50,9 @@
     gap: 8px;
 }
 
+.loc-item:nth-child(-n+2) {
+    margin-bottom: 24px;
+}
 .loc-group-text {
     font-weight: 400;
     font-size: 20px;
@@ -109,6 +113,8 @@
         justify-content: flex-start;
         flex-direction: row;
         gap: 32px;
+        margin-bottom: 80px;
+
     }
 
     .loc-text-wrapper {
@@ -133,7 +139,7 @@
     }
 
     .loc-item{
-        gap:32px;
+        gap: 16px;
     }
 
     .loc-list{
@@ -141,7 +147,6 @@
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
-        gap: 24px;
     }
 
     .loc-map {
@@ -178,6 +183,10 @@
         padding: 8px 0px;
         width: 500px;
         height: 244px;
+    }
+
+    .loc-item{
+    
     }
 
     .loc-map {
