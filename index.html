@@ -21,7 +21,7 @@
     <script type="module" crossorigin src="/web-booksy/index.js"></script>
     <link rel="modulepreload" crossorigin href="/web-booksy/assets/vendor-Clwpgkib.js">
     <link rel="stylesheet" crossorigin href="/web-booksy/assets/vendor-BfPs2Zf6.css">
-    <link rel="stylesheet" crossorigin href="/web-booksy/assets/index-SS8y62-z.css">
+    <link rel="stylesheet" crossorigin href="/web-booksy/assets/index-C2Bg9wvi.css">
   </head>
   <body>
     
@@ -30,7 +30,38 @@
     <main>
       
       
-      
+      <template id="book-modal-template">
+  <div class="book-modal-backdrop">
+    <div class="book-modal">
+      <button class="book-modal__close" data-action="close-modal">
+        &times;
+      </button>
+      <div class="book-modal__content">
+        <img class="book-modal__image" src="" alt="Book Cover" />
+        <div class="book-modal__info">
+          <h2 class="book-modal__title"></h2>
+          <p class="book-modal__author"></p>
+          <p class="book-modal__price"></p>
+          <div class="book-modal__buttons">
+            <button class="book-modal__add-to-cart">Add to Cart</button>
+            <button class="book-modal__buy-now">Buy Now</button>
+          </div>
+          <div class="book-modal__details">
+            <button class="accordion">Details</button>
+            <div class="panel book-modal__description"></div>
+
+            <button class="accordion">Shipping</button>
+            <div class="panel book-modal__shipping"></div>
+
+            <button class="accordion">Returns</button>
+            <div class="panel book-modal__returns"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
       <section class="feedback">
     <div class="container">
       <h2 class="feedback-title">Customer Feedbacks</h2>
