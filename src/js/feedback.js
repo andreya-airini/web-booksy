@@ -1,15 +1,13 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
-// Now you can use Swiper
 const swiper = new Swiper('.swiper', {
   
-  // Install modules
   modules: [Navigation, Pagination, Scrollbar],
   speed: 350,
   slidesPerView: 'auto',
   spaceBetween: 16,
-  keyboard: { enabled: true, onlyInViewport: true },                /* ★ */
+  keyboard: { enabled: true, onlyInViewport: true },             
   watchOverflow: true,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -17,17 +15,17 @@ const swiper = new Swiper('.swiper', {
   },
   pagination: {
     el: '.swiper-pagination',
-    type: 'bullets',         // тип пагінації — буліти (крапки)
-    clickable: true,         // крапки клікабельні
-    bulletClass: 'custom-bullet',             // клас для крапки
-    bulletActiveClass: 'custom-bullet-active' // клас для активної крапки
+    type: 'bullets',        
+    clickable: true,         
+    bulletClass: 'custom-bullet',          
+    bulletActiveClass: 'custom-bullet-active'
   },
-  breakpoints: {                                                    /* ★ */
-    768: {            // планшет
+  breakpoints: {                                                
+    768: {            
       slidesPerView: 'auto',
       spaceBetween: 24,
     },
-    1440: {           // десктоп
+    1440: {           
       slidesPerView: 3,
       spaceBetween: 24,
     },
