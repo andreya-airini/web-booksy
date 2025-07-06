@@ -24,6 +24,12 @@
     z-index: 1;
   }
 
+  .menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .mobile-nav > .nav-list {
     /* display: block; */
     display: flex;
