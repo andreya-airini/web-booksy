@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="books-container">
+    <h2 class="hidden-title">Trending books</h2>
+    <div class="sidebar">
+      <div class="books-header">
+
+        <div class="books-header-top">
+          <h3 class="books-title">Books</h3>
+          <p class="books-count" id="books-count">Showing 0 of 0</p>
+        </div>
+
+        <div class="books-controls">
+          <div class="select-wrapper">
+            <select id="category-select" class="category-select">
+              <option value="All categories">All categories</option>
+              <option value="Combined Print and E-Book Fiction">
+                Combined Print and E-book Fiction
+              </option>
+              <option value="Combined Print & E-Book Nonfiction">
+                Combined Print & E-book Nonfiction
+              </option>
+              <option value="Hardcover Fiction">Hardcover fiction</option>
+              <option value="Paperback Trade Fiction">
+                Paperback trade fiction
+              </option>
+              <option value="Paperback Nonfiction">Paperback nonfiction</option>
+              <option value="Advice How-To and Miscellaneous">
+                Advice, how-to & Miscellaneous
+              </option>
+              <option value="Childrens Middle Grade Hardcover">
+                Children’s middle grade hardcover
+              </option>
+            </select>
+            <svg class="select-icon" width="12" height="8">
+              <use href="../img/icons.svg#icon-down"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <ul class="categories-list">
+        <li class="category-item" data-category="All categories">
+          All categories
+        </li>
+        <li
+          class="category-item"
+          data-category="Combined Print and E-Book Fiction"
+        >
+          Combined Print and E-book Fiction
+        </li>
+        <li
+          class="category-item"
+          data-category="Combined Print & E-Book Nonfiction"
+        >
+          Combined Print & E-book Nonfiction
+        </li>
+        <li class="category-item" data-category="Hardcover Fiction">
+          Hardcover fiction
+        </li>
+        <li class="category-item" data-category="Paperback Trade Fiction">
+          Paperback trade fiction
+        </li>
+        <li class="category-item" data-category="Paperback Nonfiction">
+          Paperback nonfiction
+        </li>
+        <li
+          class="category-item"
+          data-category="Advice How-To and Miscellaneous"
+        >
+          Advice, how-to & Miscellaneous
+        </li>
+        <li
+          class="category-item"
+          data-category="Childrens Middle Grade Hardcover"
+        >
+          Children’s middle grade hardcover
+        </li>
+      </ul>
+    </div>
+
+    <div class="books-gallery">
+      <span class="loader hidden"></span>
+      <ul class="books"></ul>
+      <button class="show-more-btn hidden" type="button">Show More</button>
+    </div>
+  </div>
+</div>
