@@ -1,6 +1,3 @@
-.page-header {
-  /* display: flex; */
-}
 .no-scroll {
   overflow: hidden;
 }
@@ -17,14 +14,12 @@
 .header-logo {
   padding: 14px 20px;
 }
-.icon {
-}
+
 .nav-list {
   display: none;
   gap: 32px;
 }
-.nav-item {
-}
+
 .mobile-menu-btn {
   border: 0;
   outline: none;
@@ -33,12 +28,6 @@
   height: 48px;
   margin-right: 12px;
   padding: 8px 12px;
-}
-/* Styles for Mobile devices */
-@media only screen and (max-width: 767px) {
-  .container.header-container {
-    /* padding: 0; */
-  }
 }
 
 /* Styles for Mobile devices */

@@ -1,8 +1,6 @@
 const menuBtn = document.querySelectorAll('.mobile-menu-btn');
 const menu = document.querySelector('.mobile-menu');
 
-console.log('object');
-
 menuBtn.forEach(btn => btn.addEventListener('click', toggleMobileMenu));
 
 export function toggleMobileMenu() {
