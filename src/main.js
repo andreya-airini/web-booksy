@@ -9,21 +9,31 @@ import './js/contact-modal';
 
 import { openBookModal } from './js/book-modal.js';
 
-document.addEventListener('click', event => {
-  const bookCard = event.target.closest('.book-card');
-  if (!bookCard) return;
+document.querySelector('.books')?.addEventListener('click', async e => {
+  const btn = e.target.closest('.btn');
+  if (!btn) return;
 
-  const bookId = bookCard.dataset.bookId;
+  const bookId = btn.dataset.id;
+  if (!bookId) return;
 
-  const exampleBook = {
-    title: 'The Great Gatsby',
-    author: 'F. Scott Fitzgerald',
-    price: '$9.99',
-    image: 'https://example.com/gatsby.jpg',
-    description: 'A novel set in the roaring twenties...',
-    shipping: 'Ships in 2–4 days',
-    returns: '14-day return policy',
-  };
+  try {
+    const response = await fetch(
+      `https://books-backend.p.goit.global/books/${bookId}`
+    );
+    const data = await response.json();
 
-  openBookModal(exampleBook);
+    const bookData = {
+      image: data.book_image,
+      title: data.title,
+      author: data.author,
+      price: data.price,
+      description: data.description,
+      shipping: 'Безкоштовна доставка',
+      returns: 'Повернення протягом 14 днів',
+    };
+
+    openBookModal(bookData);
+  } catch (error) {
+    console.error('Помилка при завантаженні книги:', error);
+  }
 });
