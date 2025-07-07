@@ -90,7 +90,7 @@
   align-items: center;
   background: #e15d05;
   font-family: 'Rubik';
-  font-weight: 600;
+  font-weight: 400;
   line-height: 140%;
   letter-spacing: -1%;
   transition: background-color 0.3s ease, color 0.3s ease,
@@ -164,6 +164,7 @@
 .hero-tytle-sleder {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 .slider-nav-buttons {
   display: flex;
@@ -192,6 +193,11 @@
   .hero-tytle-sleder {
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+  .slider-nav-buttons {
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
   .title-hero {
     max-width: 560px;
@@ -267,7 +273,6 @@
     letter-spacing: -1%;
   }
   .slider-nav-buttons {
-    gap: 24px;
     padding-top: 7px;
     padding-bottom: 7px;
   }
