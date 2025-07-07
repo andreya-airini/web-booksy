@@ -1,5 +1,4 @@
 import { fetchTopBooks, fetchBooksByCategory } from './api.js';
-import { openBookModal } from './book-modal.js';
 
 const categories = document.querySelectorAll('.category-item');
 const categoriesSelect = document.querySelector('.category-select');
@@ -73,11 +72,11 @@ showMore.addEventListener('click', () => {
   showMore.blur();
 });
 
-// booksContainer.addEventListener('click', e => {
-//   if (e.target.classList.contains('btn')) {
-//     e.target.blur();
-//   }
-// });
+booksContainer.addEventListener('click', e => {
+  if (e.target.classList.contains('btn')) {
+    e.target.blur();
+  }
+});
 
 function createMarkup(books) {
   return books
