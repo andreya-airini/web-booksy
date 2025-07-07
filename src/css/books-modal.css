@@ -8,6 +8,28 @@
   padding: 16px;
   position: relative;
 }
+.book-modal__quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.qty-value {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 500;
+}
 
 .book-modal__content {
   display: flex;

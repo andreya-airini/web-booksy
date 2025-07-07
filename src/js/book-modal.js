@@ -24,7 +24,6 @@ export function openBookModal(bookData) {
   modalMarkup.querySelector('.book-modal__price').textContent = bookData.price
     ? `$${bookData.price}`
     : 'No price';
-
   modalMarkup.querySelector('.book-modal__description').innerHTML = `<p>${
     bookData.description || 'No description'
   }</p>`;
@@ -38,22 +37,55 @@ export function openBookModal(bookData) {
   modalInstance = modalMarkup;
   document.body.appendChild(modalInstance);
 
+  document.body.style.overflow = 'hidden';
+
   const backdrop = document.querySelector('.book-modal-backdrop');
   if (!backdrop) return;
 
   backdrop.addEventListener('click', onBackdropClick);
   const closeBtn = backdrop.querySelector('[data-action="close-modal"]');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeBookModal);
-  }
+  if (closeBtn) closeBtn.addEventListener('click', closeBookModal);
 
   initAccordions(backdrop);
+
+  let quantity = 1;
+  const qtyValue = backdrop.querySelector('.qty-value');
+  const decrementBtn = backdrop.querySelector('[data-action="decrement"]');
+  const incrementBtn = backdrop.querySelector('[data-action="increment"]');
+
+  decrementBtn?.addEventListener('click', () => {
+    if (quantity > 1) quantity--;
+    if (qtyValue) qtyValue.textContent = quantity;
+  });
+
+  incrementBtn?.addEventListener('click', () => {
+    quantity++;
+    if (qtyValue) qtyValue.textContent = quantity;
+  });
+
+  const addToCartBtn = backdrop.querySelector('.book-modal__add-to-cart');
+  const buyNowBtn = backdrop.querySelector('.book-modal__buy-now');
+
+  addToCartBtn?.addEventListener('click', () => {
+    console.log('🛒 Add to Cart:', {
+      title: bookData.title,
+      quantity,
+    });
+  });
+
+  buyNowBtn?.addEventListener('click', () => {
+    console.log('💳 Buy Now:', {
+      title: bookData.title,
+      quantity,
+    });
+  });
 }
 
 export function closeBookModal() {
   const backdrop = document.querySelector('.book-modal-backdrop');
   if (backdrop) backdrop.remove();
   modalInstance = null;
+  document.body.style.overflow = '';
 }
 
 function onBackdropClick(e) {
