@@ -1,4 +1,3 @@
-/* MOBILE-FIRST layout */
 .book-modal {
   width: 90%;
   max-width: 480px;
@@ -8,6 +7,7 @@
   padding: 16px;
   position: relative;
 }
+
 .book-modal__quantity {
   display: flex;
   align-items: center;
@@ -39,8 +39,11 @@
 
 .book-modal__image {
   width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
   border-radius: 8px;
-  object-fit: cover;
+  background: #fff;
 }
 
 .book-modal__info {
@@ -61,17 +64,20 @@
 
 .book-modal__buttons {
   display: flex;
-  gap: 0.5rem;
+  flex-direction: row;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 .book-modal__add-to-cart,
 .book-modal__buy-now {
-  flex: 1;
-  padding: 0.6rem;
-  border: none;
-  border-radius: 6px;
+  width: 100%;
+  padding: 0.75rem;
   font-weight: 600;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
+  border: none;
 }
 
 .book-modal__add-to-cart {
@@ -80,7 +86,7 @@
 }
 
 .book-modal__buy-now {
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #ccc;
   color: black;
 }
@@ -97,7 +103,7 @@
   text-align: left;
   font-weight: 600;
   padding: 1rem;
-  background: #fff;
+  background: #fceee6;
   border: 1px solid #e2e2e2;
   border-bottom: none;
   display: flex;
@@ -106,6 +112,7 @@
   cursor: pointer;
   transition: background 0.3s;
   font-size: 1rem;
+  color: #333;
 }
 
 .accordion:last-of-type {
@@ -124,7 +131,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
-  background: #fdfdfd;
+  background: #fceee6;
   border: 1px solid #e2e2e2;
   border-top: none;
   padding: 0 1rem;
@@ -144,31 +151,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .book-modal__close {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 16px;
+  right: 16px;
   background: none;
   border: none;
   font-size: 1.5rem;
   line-height: 1;
   cursor: pointer;
+  z-index: 2;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1300px) {
   .book-modal {
-    max-width: 720px;
+    max-width: 1300px;
+    padding: 64px;
   }
 
   .book-modal__content {
     flex-direction: row;
+    gap: 48px;
   }
 
   .book-modal__image {
-    width: 180px;
-    height: auto;
+    width: 344px;
+    height: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    flex-shrink: 0;
   }
 
   .book-modal__info {

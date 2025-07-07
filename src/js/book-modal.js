@@ -13,83 +13,94 @@ export function openBookModal(bookData) {
   }
 
   const modalMarkup = template.content.cloneNode(true);
+  const wrapper = modalMarkup.firstElementChild;
 
-  modalMarkup.querySelector('.book-modal__image').src = bookData.image || '';
-  modalMarkup.querySelector('.book-modal__image').alt =
+  wrapper.querySelector('.book-modal__image').src = bookData.image || '';
+  wrapper.querySelector('.book-modal__image').alt =
     bookData.title || 'Book Cover';
-  modalMarkup.querySelector('.book-modal__title').textContent =
+  wrapper.querySelector('.book-modal__title').textContent =
     bookData.title || 'No title';
-  modalMarkup.querySelector('.book-modal__author').textContent =
+  wrapper.querySelector('.book-modal__author').textContent =
     bookData.author || 'Unknown author';
-  modalMarkup.querySelector('.book-modal__price').textContent = bookData.price
+  wrapper.querySelector('.book-modal__price').textContent = bookData.price
     ? `$${bookData.price}`
     : 'No price';
-  modalMarkup.querySelector('.book-modal__description').innerHTML = `<p>${
+
+  wrapper.querySelector('.book-modal__description').innerHTML = `<p>${
     bookData.description || 'No description'
   }</p>`;
-  modalMarkup.querySelector('.book-modal__shipping').innerHTML = `<p>${
+  wrapper.querySelector('.book-modal__shipping').innerHTML = `<p>${
     bookData.shipping || 'Shipping info unavailable'
   }</p>`;
-  modalMarkup.querySelector('.book-modal__returns').innerHTML = `<p>${
+  wrapper.querySelector('.book-modal__returns').innerHTML = `<p>${
     bookData.returns || 'Return info unavailable'
   }</p>`;
 
-  modalInstance = modalMarkup;
-  document.body.appendChild(modalInstance);
-
-  document.body.style.overflow = 'hidden';
-
-  const backdrop = document.querySelector('.book-modal-backdrop');
-  if (!backdrop) return;
-
-  backdrop.addEventListener('click', onBackdropClick);
-  const closeBtn = backdrop.querySelector('[data-action="close-modal"]');
-  if (closeBtn) closeBtn.addEventListener('click', closeBookModal);
-
-  initAccordions(backdrop);
-
+  // Quantity logic
+  const quantityEl = wrapper.querySelector('.qty-value');
+  const decrementBtn = wrapper.querySelector('[data-action="decrement"]');
+  const incrementBtn = wrapper.querySelector('[data-action="increment"]');
   let quantity = 1;
-  const qtyValue = backdrop.querySelector('.qty-value');
-  const decrementBtn = backdrop.querySelector('[data-action="decrement"]');
-  const incrementBtn = backdrop.querySelector('[data-action="increment"]');
+  quantityEl.textContent = quantity;
 
-  decrementBtn?.addEventListener('click', () => {
-    if (quantity > 1) quantity--;
-    if (qtyValue) qtyValue.textContent = quantity;
+  decrementBtn.addEventListener('click', () => {
+    if (quantity > 1) {
+      quantity--;
+      quantityEl.textContent = quantity;
+    }
   });
 
-  incrementBtn?.addEventListener('click', () => {
+  incrementBtn.addEventListener('click', () => {
     quantity++;
-    if (qtyValue) qtyValue.textContent = quantity;
+    quantityEl.textContent = quantity;
   });
 
-  const addToCartBtn = backdrop.querySelector('.book-modal__add-to-cart');
-  const buyNowBtn = backdrop.querySelector('.book-modal__buy-now');
-
-  addToCartBtn?.addEventListener('click', () => {
-    console.log('🛒 Add to Cart:', {
-      title: bookData.title,
-      quantity,
+  // Cart button
+  wrapper
+    .querySelector('.book-modal__add-to-cart')
+    .addEventListener('click', () => {
+      console.log(`Added ${quantity} of '${bookData.title}' to cart.`);
     });
-  });
 
-  buyNowBtn?.addEventListener('click', () => {
-    console.log('💳 Buy Now:', {
-      title: bookData.title,
-      quantity,
+  // Buy button
+  wrapper
+    .querySelector('.book-modal__buy-now')
+    .addEventListener('click', () => {
+      alert('Дякую за покупку');
     });
-  });
+
+  // Append modal
+  modalInstance = wrapper;
+  document.body.appendChild(modalInstance);
+  document.body.classList.add('no-scroll');
+
+  const backdrop = modalInstance;
+  backdrop.addEventListener('click', onBackdropClick);
+
+  const closeBtn = backdrop.querySelector('[data-action="close-modal"]');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeBookModal);
+  }
+
+  document.addEventListener('keydown', handleEscape);
+  initAccordions(backdrop);
 }
 
 export function closeBookModal() {
-  const backdrop = document.querySelector('.book-modal-backdrop');
-  if (backdrop) backdrop.remove();
+  if (modalInstance) modalInstance.remove();
+  document.body.classList.remove('no-scroll');
+  document.removeEventListener('keydown', handleEscape);
   modalInstance = null;
-  document.body.style.overflow = '';
 }
 
 function onBackdropClick(e) {
   if (e.target.classList.contains('book-modal-backdrop')) {
+    closeBookModal();
+  }
+}
+
+function handleEscape(e) {
+  if (e.key === 'Escape') {
     closeBookModal();
   }
 }
@@ -103,6 +114,7 @@ function initAccordions(container) {
     button.addEventListener('click', () => {
       const isOpen = button.classList.contains('active');
 
+      // Close all
       accordionButtons.forEach(btn => {
         btn.classList.remove('active');
         btn.nextElementSibling?.classList.remove('open');
