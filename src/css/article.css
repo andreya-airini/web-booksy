@@ -1,13 +1,8 @@
 
-  
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-  }
-  
-  picture {
+picture {
     display: block;
+    border-radius: 16px;
+    overflow: hidden;
   }
   
   .section-article {
@@ -39,6 +34,8 @@
     font-size: 18px;
     line-height: 1.5;
     color: #0b0500;
+  }
+  p:last-child {
     margin-bottom: 66px;
   }
   
@@ -53,9 +50,9 @@
       max-width: 768px;
       padding: 0 32px;
     }
-    .text-article {
-      margin-bottom: 32px;
-    }
+    p:last-child {
+        margin-bottom: 32px;
+      }
   }
   
   @media only screen and (min-width: 1440px) {
@@ -71,5 +68,8 @@
     .wrapper-two {
       max-width: 640px;
     }
+    p:last-child {
+        margin-bottom: 0;
+      }
   }
   
