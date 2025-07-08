@@ -61,7 +61,6 @@ fetchTopBooks()
     hideLoader();
   });
 
-
 showMore.addEventListener('click', () => {
   renderBatch(stepRender);
   const firstCard = document.querySelector('.books li');
@@ -73,12 +72,11 @@ showMore.addEventListener('click', () => {
   showMore.blur();
 });
 
-
-// booksContainer.addEventListener('click', e => {
-//   if (e.target.classList.contains('btn')) {
-//     e.target.blur();
-//   }
-// });
+booksContainer.addEventListener('click', e => {
+  if (e.target.classList.contains('btn')) {
+    e.target.blur();
+  }
+});
 
 function createMarkup(books) {
   return books
@@ -97,7 +95,7 @@ function createMarkup(books) {
     </div>
   </div>
 
-  <button class="btn">Learn More</button>
+  <button class="btn" data-id="${item._id}">Learn More</button>
 </li>`;
     })
     .join('');

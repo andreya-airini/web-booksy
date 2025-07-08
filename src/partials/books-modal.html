@@ -10,18 +10,38 @@
           <h2 class="book-modal__title"></h2>
           <p class="book-modal__author"></p>
           <p class="book-modal__price"></p>
+          <div class="book-modal__quantity">
+            <button class="qty-btn" data-action="decrement">-</button>
+            <span class="qty-value">1</span>
+            <button class="qty-btn" data-action="increment">+</button>
+          </div>
           <div class="book-modal__buttons">
             <button class="book-modal__add-to-cart">Add to Cart</button>
             <button class="book-modal__buy-now">Buy Now</button>
           </div>
           <div class="book-modal__details">
-            <button class="accordion">Details</button>
+            <button class="accordion">
+              <span>Details</span>
+              <svg class="accordion-icon" width="12" height="8">
+                <use href="./img/icons.svg#icon-down"></use>
+              </svg>
+            </button>
             <div class="panel book-modal__description"></div>
 
-            <button class="accordion">Shipping</button>
+            <button class="accordion">
+              <span>Shipping</span>
+              <svg class="accordion-icon" width="12" height="8">
+                <use href="./img/icons.svg#icon-down"></use>
+              </svg>
+            </button>
             <div class="panel book-modal__shipping"></div>
 
-            <button class="accordion">Returns</button>
+            <button class="accordion">
+              <span>Returns</span>
+              <svg class="accordion-icon" width="12" height="8">
+                <use href="./img/icons.svg#icon-down"></use>
+              </svg>
+            </button>
             <div class="panel book-modal__returns"></div>
           </div>
         </div>

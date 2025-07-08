@@ -143,14 +143,14 @@
   transition: background-color 0.3s ease;
 }
 
-/* .btn:hover,
+.btn:hover,
 .btn:focus {
   background-color: #EA8D50;
 }
 
 .btn:active {
   background-color: #DAD9D8;
-} */
+}
 
 .text-group {
   flex: 1;
@@ -237,6 +237,7 @@
 
   .item-image {
     width: 100%;
+    height: 484px;
   }
 
   .btn {

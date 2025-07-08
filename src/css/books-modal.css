@@ -1,95 +1,206 @@
-.book-modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+.book-modal {
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: #fceee6;
+  border-radius: 12px;
+  padding: 16px;
+  position: relative;
+}
+
+.book-modal__quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 1px solid #0b0500;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.qty-value {
+  min-width: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-}
-
-.book-modal {
-  background-color: #fff;
+  text-align: center;
+  font-weight: 500;
   border-radius: 8px;
-  width: 90%;
-  max-width: 700px;
-  max-height: 95vh;
-  overflow-y: auto;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.book-modal__close {
-  background: none;
-  border: none;
-  font-size: 24px;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  cursor: pointer;
+    width: 42px;
+    height: 40px;
+    background: rgba(11, 5, 0, 0.05);
 }
 
 .book-modal__content {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .book-modal__image {
-  max-width: 200px;
+  width: 100%;
   height: auto;
-  border-radius: 4px;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
 }
 
 .book-modal__info {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.75rem;
+}
+
+.book-modal__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.book-modal__author,
+.book-modal__price {
+  font-size: 1rem;
 }
 
 .book-modal__buttons {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.book-modal__add-to-cart,
+.book-modal__buy-now {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.book-modal__add-to-cart {
+  background-color: #e15d05;;
+  color: white;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.book-modal__buy-now {
+  background-color: transparent;
+  border: 1px solid #0b0500;
+  color: black;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0b0500;
+}
+
+.book-modal__details {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .accordion {
-  cursor: pointer;
-  padding: 10px;
   width: 100%;
-  border: none;
-  background-color: #eee;
   text-align: left;
-  font-size: 16px;
-  margin-top: 10px;
+  font-weight: 600;
+  padding: 1rem;
+  background: #fceee6;
+  border: 1px solid rgba(11, 5, 0, 0.15);
+  border-bottom: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+  color: #333;
+}
+
+.accordion:last-of-type {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion.active .accordion-icon {
+  transform: rotate(180deg);
 }
 
 .panel {
-  padding: 10px;
-  display: none;
-  background-color: #f9f9f9;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background: #fceee6;
+  border: 1px solid #e2e2e2;
+  border-top: none;
+  padding: 0 1rem;
+  font-size: 0.95rem;
 }
 
-@media (max-width: 768px) {
+.panel.open {
+  max-height: 300px;
+  padding: 1rem;
+}
+
+.book-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.book-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@media (min-width: 1300px) {
+  .book-modal {
+    max-width: 1300px;
+    padding: 64px;
+  }
+
   .book-modal__content {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    gap: 48px;
   }
 
   .book-modal__image {
-    max-width: 100%;
+    width: 344px;
+    height: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    flex-shrink: 0;
   }
 
-  .book-modal__buttons {
-    justify-content: center;
-  }
-
-  .book-modal {
-    width: 95%;
-    padding: 15px;
+  .book-modal__info {
+    flex: 1;
   }
 }
