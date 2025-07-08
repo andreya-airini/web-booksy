@@ -252,7 +252,7 @@
   white-space: normal !important;
   word-break: break-word;
   line-height: 150% !important;
-  background-color:  rgba(11, 5, 0, 0.1) !important;
+  background: linear-gradient(rgba(11, 5, 0, 0.05), rgba(11, 5, 0, 0.05)), #fceee6 !important;
 }
 
 .choices__list::-webkit-scrollbar {
@@ -264,13 +264,8 @@
   border-radius: 4px !important;
 }
 
-
-.choices__item--choice.is-highlighted {
-  background-color: rgba(11, 5, 0, 0.15) !important;
-}
-
 .choices__item--choice:hover {
-  background-color: rgba(11, 5, 0, 0.15) !important;
+  background: linear-gradient(rgba(11, 5, 0, 0.1), rgba(11, 5, 0, 0.1)), #fceee6 !important;
 }
 
 .choices__item--selectable {
