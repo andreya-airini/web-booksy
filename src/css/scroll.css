@@ -1,0 +1,57 @@
+.scroll-btn {
+    /* --- Позиціювання --- */
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: 10;
+
+  /* --- Відображення --- */
+  display: none;
+  cursor: pointer;
+
+  /* --- Розміри --- */
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+
+  /* --- Стилізація --- */
+  background-color: #e15d05;
+  border: 1px solid rgba(11, 5, 0, 0.15);
+  border-radius: 16px;
+}
+
+.scroll-btn:hover,
+.scroll-btn:focus {
+    background-color: #fceee6;
+}
+
+.scroll-btn:hover .icon-up,
+.scroll-btn:focus .icon-up {
+    fill: #0b0500;
+}
+
+.scroll-btn.visible {
+    display: block;
+}
+
+.icon-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #fff;
+    transition: fill 0.3s ease;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+    .scroll-btn {
+        bottom: 24px;
+        right: 24px;
+    } 
+}
+
+@media only screen and (min-width: 1440px) {
+    .scroll-btn {
+        bottom: 40px;
+        right: 40px;
+    }
+}
