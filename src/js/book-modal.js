@@ -29,12 +29,12 @@ export function openBookModal(bookData) {
   wrapper.querySelector('.book-modal__description').innerHTML = `<p>${
     bookData.description || 'No description'
   }</p>`;
-  wrapper.querySelector('.book-modal__shipping').innerHTML = `<p>${
-    bookData.shipping || 'Shipping info unavailable'
-  }</p>`;
-  wrapper.querySelector('.book-modal__returns').innerHTML = `<p>${
-    bookData.returns || 'Return info unavailable'
-  }</p>`;
+  wrapper.querySelector(
+    '.book-modal__shipping'
+  ).innerHTML = `<p>We ship across the United States within 2–5 business days. All orders are processed through USPS or a reliable courier service. Enjoy free standard shipping on orders over $50.  </p>`;
+  wrapper.querySelector(
+    '.book-modal__returns'
+  ).innerHTML = `<p>You can return an item within 14 days of receiving your order, provided it hasn’t been used and is in its original condition. To start a return, please contact our support team — we’ll guide you through the process quickly and hassle-free.</p>`;
 
   // Quantity logic
   const quantityEl = wrapper.querySelector('.qty-value');
@@ -66,7 +66,7 @@ export function openBookModal(bookData) {
   wrapper
     .querySelector('.book-modal__buy-now')
     .addEventListener('click', () => {
-      alert('Дякую за покупку');
+      alert('Thanks for your purchase!');
     });
 
   // Append modal
