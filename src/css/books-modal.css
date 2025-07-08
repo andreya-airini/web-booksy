@@ -19,16 +19,23 @@
   height: 32px;
   font-size: 1.25rem;
   font-weight: bold;
-  border: 1px solid #ccc;
-  background: white;
+  border: 1px solid #0b0500;
+  background: transparent;
   cursor: pointer;
   border-radius: 4px;
 }
 
 .qty-value {
   min-width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-weight: 500;
+  border-radius: 8px;
+    width: 42px;
+    height: 40px;
+    background: rgba(11, 5, 0, 0.05);
 }
 
 .book-modal__content {
@@ -81,14 +88,22 @@
 }
 
 .book-modal__add-to-cart {
-  background-color: #f97316;
+  background-color: #e15d05;;
   color: white;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
 }
 
 .book-modal__buy-now {
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: transparent;
+  border: 1px solid #0b0500;
   color: black;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0b0500;
 }
 
 .book-modal__details {
@@ -104,7 +119,7 @@
   font-weight: 600;
   padding: 1rem;
   background: #fceee6;
-  border: 1px solid #e2e2e2;
+  border: 1px solid rgba(11, 5, 0, 0.15);
   border-bottom: none;
   display: flex;
   justify-content: space-between;
