@@ -108,7 +108,7 @@
 .shop-now-btn:hover,
 .shop-now-btn:focus {
   background: #fff;
-  border: 1px solid rgba(11, 5, 0, 0.15);
+  border: 1px solid #0b0500;
   color: #0b0500;
 }
 /* ============================= */
