@@ -20,6 +20,15 @@
   gap: 32px;
 }
 
+.nav-link {
+  line-height: 1.5;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  opacity: 0.2;
+}
+
 .mobile-menu-btn {
   border: 0;
   outline: none;
