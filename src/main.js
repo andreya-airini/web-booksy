@@ -7,6 +7,7 @@ import './js/feedback';
 import './js/events';
 import './js/contact-modal';
 import './js/location.js';
+import './js/scroll.js'
 
 import { openBookModal } from './js/book-modal.js';
 
