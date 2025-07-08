@@ -29,6 +29,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .hero-main-slider .container-slider.swiper-wrapper {
@@ -210,6 +211,9 @@
   .hero-main-slider .container-slider.swiper-wrapper {
     height: 274px;
   }
+
+    .hero-main-slider .hero-img {
+      border-radius: 16px; }
 
   /* =================================== */
   .hero-text-content {
