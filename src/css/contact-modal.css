@@ -69,6 +69,7 @@
     justify-content: center;
     border-radius: 50%;
     transition: all 0.2s ease;
+    z-index: 1001;
 }
 
 .modal-close:hover {
@@ -365,28 +366,6 @@ body.modal-open {
 }
 
 @media screen and (min-width: 375px) {
-    /* .modal-overlay {
-        padding: 12px;
-    } */
-
-    /* .modal-header {
-        padding-top: 16px;
-        padding-left: 16px;
-        padding-right: 16px;
-    } */
-
-    /* .modal-title {
-        font-size: 24px;
-    } */
-
-    /* .modal-form {
-        padding: 0 20px 20px;
-    } */
-
-    /* .form-input {
-        padding: 8px 12px;
-        font-size: 16px;
-    } */
 
     .success-message {
         padding: 24px 20px;
