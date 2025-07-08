@@ -59,3 +59,15 @@ const quoteText = document.getElementById('quote-text');
 const randomIndex = Math.floor(Math.random() * quotes.length);
 quoteText.textContent = quotes[randomIndex];
 
+
+const form = document.querySelector('.subscribe-form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const email = form.elements.email.value.trim();
+
+  console.log('Submitted email:', email);
+
+  form.reset();
+});
