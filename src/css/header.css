@@ -20,6 +20,13 @@
   gap: 32px;
 }
 
+.nav-link:active {
+  opacity: 0.8;
+}
+.nav-link:disabled {
+  opacity: 0.2;
+}
+
 .mobile-menu-btn {
   border: 0;
   outline: none;
