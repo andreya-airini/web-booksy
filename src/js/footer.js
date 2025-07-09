@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         message: 'You have successfully subscribed!',
         position: 'topRight',
         timeout: 3000,
+        color: '#e15d05', 
       });
   
       form.reset();
