@@ -140,6 +140,8 @@ categoriesSelect.addEventListener('change', () => {
 
 categories.forEach(category => {
   category.addEventListener('click', () => {
+    categories.forEach(i => i.classList.remove('active'));
+    category.classList.add('active');
     const categoryName = category.dataset.category;
 
     hideShowMoreBtn();
