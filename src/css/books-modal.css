@@ -1,4 +1,3 @@
-/* MOBILE-FIRST layout */
 .book-modal {
   width: 90%;
   max-width: 480px;
@@ -12,7 +11,6 @@
 }
 .book-modal {
   max-height: none;
-  /* height: 90vh; */
   overflow-y: auto;
 }
 
@@ -66,8 +64,6 @@
 }
 
 .book-modal__price {
-  /* font-size: 16px; */
-  /* font-weight: 400; */
   margin-bottom: 24px;
   font-weight: 400;
   font-size: 24px;
@@ -131,11 +127,25 @@
 
 .book-modal__add-to-cart {
   background: #e15d05;
-  color: white;
   font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     color: #fff;
+}
+
+.book-modal__add-to-cart:hover,
+.book-modal__add-to-cart:focus {
+  border: 1px solid #0b0500;
+  background: #ea8d50;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0b0500;
+}
+
+.book-modal__add-to-cart:active {
+  background: #5a2502;
+  color: #fff;
 }
 
 .book-modal__buy-now {
@@ -146,6 +156,21 @@
     font-size: 16px;
     line-height: 1.5;
     color: #0b0500;
+}
+
+.book-modal__buy-now:hover,
+.book-modal__buy-now:focus {
+  border: 1px solid #0b0500;
+  background: #0b0500;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.book-modal__buy-now:active {
+  background: #5a2502;
+  color: #fff;
 }
 
 .book-modal__details {
@@ -160,7 +185,6 @@
   width: 100%;
   text-align: left;
   font-weight: 600;
-  /* padding: 1rem; */
   background: #fceee6;
   border: 1px solid rgba(11, 5, 0, 0.15);
   border-bottom: none;
@@ -175,10 +199,6 @@
   border-right: none;
   border-left: none;
 }
-
-/* .accordion:last-of-type {
-  border-bottom: 1px solid rgba(11, 5, 0, 0.15);
-} */
 
 .accordion-icon {
   transition: transform 0.3s ease;
@@ -216,14 +236,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   animation: fadeBackdrop 0.3s ease-out;
-
   display: flex;
   justify-content: center;
-  /* УДАЛИ или замени это: */
-  /* align-items: center; */
-  align-items: flex-start;
   overflow-y: auto;
   padding: 5vh 16px;
 }
@@ -243,7 +258,6 @@
 @media (min-width: 768px) {
   .book-modal {
     max-width: 704px;
-
     padding: 64px 32px;
     max-height: 90vh;
     overflow-y: auto;
