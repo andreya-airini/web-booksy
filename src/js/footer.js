@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailInput = form.elements.email;
       const email = emailInput.value.trim();
   
-      // 🔍 Порожнє поле
+      
       if (!email) {
         iziToast.error({
           title: 'Error',
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
   
-      // 🔍 Невірний формат
+      
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         iziToast.error({
@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
   
-      // ✅ Успішна підписка
       iziToast.success({
         title: 'Success',
         message: 'You have successfully subscribed!',
