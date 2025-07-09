@@ -10,6 +10,11 @@
   animation: fadeScaleIn 0.3s ease-out;
   transform-origin: center;
 }
+.book-modal {
+  max-height: none;
+  /* height: 90vh; */
+  overflow-y: auto;
+}
 
 @keyframes fadeScaleIn {
   0% {
@@ -47,24 +52,29 @@
 }
 
 .book-modal__title {
-  font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 40px;
   line-height: 1.2;
-  color: #000000;
+  letter-spacing: -0.01em;
+  color: #0b0500;
 }
-
 .book-modal__author {
   font-size: 14px;
   font-weight: 400;
-  color: #6b6050;
+  line-height: 1.5;
+  color: #0b0500;
 }
 
 .book-modal__price {
-  font-size: 16px;
-  font-weight: 600;
+  /* font-size: 16px; */
+  /* font-weight: 400; */
   margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #0b0500;
 }
-
 .book-modal__quantity {
   display: flex;
   align-items: center;
@@ -74,9 +84,9 @@
 
 .qty-btn {
   width: 32px;
-  height: 32px;
+  height: 40px;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 400;
   border: 1px solid #0b0500;
   background: transparent;
   cursor: pointer;
@@ -90,12 +100,12 @@
   align-items: center;
   text-align: center;
   font-weight: 500;
-  border-radius: 8px;
-    width: 42px;
-    height: 40px;
-    background: rgba(11, 5, 0, 0.05);
+  border-radius: 4px;
+  width: 42px;
+  height: 40px;
+  background: #0b05000d;
+  border: 1px solid rgba(11, 5, 0, 0.15);
 }
-
 .book-modal__buttons {
   display: flex;
   flex-direction: column;
@@ -106,16 +116,21 @@
 .book-modal__add-to-cart,
 .book-modal__buy-now {
   width: 100%;
+  height: 48px;
   padding: 12px;
   font-weight: 600;
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
   border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
 }
 
 .book-modal__add-to-cart {
-  background-color: #e15d05;;
+  background: #e15d05;
   color: white;
   font-weight: 400;
     font-size: 16px;
@@ -135,9 +150,9 @@
 
 .book-modal__details {
   margin-top: 0;
-  border-radius: 8px;
+
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
   width: 100%;
 }
 
@@ -145,7 +160,7 @@
   width: 100%;
   text-align: left;
   font-weight: 600;
-  padding: 1rem;
+  /* padding: 1rem; */
   background: #fceee6;
   border: 1px solid rgba(11, 5, 0, 0.15);
   border-bottom: none;
@@ -156,11 +171,14 @@
   transition: background 0.3s;
   font-size: 1rem;
   color: #333;
+  padding: 16px 16px 16px 0px;
+  border-right: none;
+  border-left: none;
 }
 
-.accordion:last-of-type {
-  border-bottom: 1px solid #e2e2e2;
-}
+/* .accordion:last-of-type {
+  border-bottom: 1px solid rgba(11, 5, 0, 0.15);
+} */
 
 .accordion-icon {
   transition: transform 0.3s ease;
@@ -175,15 +193,19 @@
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
   background: #fceee6;
-  border: 1px solid #e2e2e2;
+  border: 1px solid rgba(11, 5, 0, 0.15);
   border-top: none;
   padding: 0 1rem;
   font-size: 0.95rem;
+  border-right: none;
+  border-left: none;
 }
 
 .panel.open {
-  max-height: 300px;
   padding: 1rem;
+  padding: 16px 16px 16px 0px;
+  margin-bottom: 24px;
+  border-bottom: none;
 }
 
 .book-modal-backdrop {
@@ -194,8 +216,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+
   animation: fadeBackdrop 0.3s ease-out;
+
+  display: flex;
+  justify-content: center;
+  /* УДАЛИ или замени это: */
+  /* align-items: center; */
+  align-items: flex-start;
+  overflow-y: auto;
+  padding: 5vh 16px;
 }
 
 .book-modal__close {
@@ -213,7 +243,7 @@
 @media (min-width: 768px) {
   .book-modal {
     max-width: 704px;
-    height: 664px;
+
     padding: 64px 32px;
     max-height: 90vh;
     overflow-y: auto;
