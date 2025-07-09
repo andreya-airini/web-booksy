@@ -86,7 +86,7 @@
   width: 32px;
   height: 40px;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
   border: 1px solid #0b0500;
   background: transparent;
   cursor: pointer;
@@ -132,12 +132,20 @@
 .book-modal__add-to-cart {
   background: #e15d05;
   color: white;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
 }
 
 .book-modal__buy-now {
-  background: #fceee6;
-  border: 1px solid #0a0909;
+  background-color: transparent;
+  border: 1px solid #0b0500;
   color: black;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0b0500;
 }
 
 .book-modal__details {

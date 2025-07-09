@@ -1,3 +1,5 @@
+import Choices from 'choices.js';
+import 'choices.js/public/assets/styles/choices.min.css';
 import { fetchTopBooks, fetchBooksByCategory } from './api.js';
 
 const categories = document.querySelectorAll('.category-item');
@@ -6,6 +8,16 @@ const booksContainer = document.querySelector('.books');
 const loader = document.querySelector('.loader');
 const showMore = document.querySelector('.show-more-btn');
 const booksCount = document.querySelector('#books-count');
+
+const select = document.getElementById('category-select');
+const choices = new Choices(select, {
+  searchEnabled: false,
+  itemSelectText: '',
+  shouldSort: false,
+  position: 'bottom',
+  placeholder: true,
+  placeholderValue: 'Categories',
+});
 
 function showLoader() {
   loader.classList.remove('hidden');

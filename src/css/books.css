@@ -92,6 +92,8 @@
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
+  width: 12px !important;
+  height: 8px !important;
 }
 
 .books {
@@ -145,11 +147,11 @@
 
 .btn:hover,
 .btn:focus {
-  background-color: #EA8D50;
+  background-color: #ea8d50;
 }
 
 .btn:active {
-  background-color: #DAD9D8;
+  background-color: #dad9d8;
 }
 
 .text-group {
@@ -202,28 +204,97 @@
 
 .show-more-btn:hover,
 .show-more-btn:focus {
-  background-color: #0B0500;
+  background-color: #0b0500;
 }
 
 .show-more-btn:active {
-  background-color: #B44A04;
+  background-color: #b44a04;
+}
+
+.choices[data-type*='select-one']::after {
+  display: none !important;
+}
+
+.choices__inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important; 
+  height: 43px !important;
+  padding: 8px 12px !important; 
+  border: 1px solid rgba(11, 5, 0, 0.15) !important;
+  border-radius: 4px !important;
+  color: #0B0500 !important;
+  background-color: rgba(11, 5, 0, 0.05) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.choices__placeholder {
+  opacity: 1 !important;
+}
+
+.choices__list--dropdown .choices__item {
+  margin: 0;
+  padding: 0;
+}
+
+.choices__list--dropdown {
+  border-radius: 4px !important;
+  overflow: hidden;
+}
+
+.choices__item--choice {
+  display: flex !important;
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  cursor: pointer;
+  white-space: normal !important;
+  word-break: break-word;
+  line-height: 150% !important;
+  background: linear-gradient(rgba(11, 5, 0, 0.05), rgba(11, 5, 0, 0.05)), #fceee6 !important;
+}
+
+.choices__list::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+.choices__list::-webkit-scrollbar-thumb {
+  background-color: #e15d05 !important;
+  border-radius: 4px !important;
+}
+
+.choices__item--choice:hover {
+  background: linear-gradient(rgba(11, 5, 0, 0.1), rgba(11, 5, 0, 0.1)), #fceee6 !important;
+}
+
+.choices__item--selectable {
+  padding: 0;
+  margin: 0;
+}
+
+.choices__list--single {
+  padding: 0 !important;
 }
 
 @media screen and (min-width: 768px) {
+  .books-controls {
+    margin-top: 0px;
+  }
+
+  .choices {
+    width: 249px;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+  }
+
   .books-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
     margin-bottom: 32px;
-  }
-
-  .books-controls {
-    margin-top: 0;
-  }
-
-  .category-select {
-    width: 249px;
   }
 
   .books {
