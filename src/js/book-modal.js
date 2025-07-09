@@ -114,13 +114,10 @@ function initAccordions(container) {
     button.addEventListener('click', () => {
       const isOpen = button.classList.contains('active');
 
-      // Close all
-      accordionButtons.forEach(btn => {
-        btn.classList.remove('active');
-        btn.nextElementSibling?.classList.remove('open');
-      });
-
-      if (!isOpen) {
+      if (isOpen) {
+        button.classList.remove('active');
+        panel?.classList.remove('open');
+      } else {
         button.classList.add('active');
         panel?.classList.add('open');
       }
