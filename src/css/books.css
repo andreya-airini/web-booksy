@@ -218,12 +218,12 @@
 .choices__inner {
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start !important; 
+  justify-content: flex-start !important;
   height: 43px !important;
-  padding: 8px 12px !important; 
+  padding: 8px 12px !important;
   border: 1px solid rgba(11, 5, 0, 0.15) !important;
   border-radius: 4px !important;
-  color: #0B0500 !important;
+  color: #0b0500 !important;
   background-color: rgba(11, 5, 0, 0.05) !important;
   font-size: 16px !important;
   font-weight: 400 !important;
@@ -252,7 +252,8 @@
   white-space: normal !important;
   word-break: break-word;
   line-height: 150% !important;
-  background: linear-gradient(rgba(11, 5, 0, 0.05), rgba(11, 5, 0, 0.05)), #fceee6 !important;
+  background: linear-gradient(rgba(11, 5, 0, 0.05), rgba(11, 5, 0, 0.05)),
+    #fceee6 !important;
 }
 
 .choices__list::-webkit-scrollbar {
@@ -325,13 +326,16 @@
     cursor: pointer;
   }
 
-
   .category-item {
     transition: color 0.2s ease;
   }
 
   .category-item:hover {
-    color: #E15D05;
+    color: #e15d05;
+  }
+
+  .category-item.active {
+    color: #e15d05;
   }
 
   .books-container {
