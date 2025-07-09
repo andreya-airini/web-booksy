@@ -1,5 +1,8 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 
 let modalInstance = null;
 
@@ -64,10 +67,17 @@ export function openBookModal(bookData) {
 
   // Buy button
   wrapper
-    .querySelector('.book-modal__buy-now')
-    .addEventListener('click', () => {
-      alert('Thanks for your purchase!');
+  .querySelector('.book-modal__buy-now')
+  .addEventListener('click', () => {
+    iziToast.success({
+      title: 'Success',
+      message: 'Thanks for your purchase!',
+      position: 'topRight',
+      timeout: 3000,
+      progressBar: true,
+      color: '#e15d05', 
     });
+  });
 
   // Append modal
   modalInstance = wrapper;
