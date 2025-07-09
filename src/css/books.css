@@ -325,6 +325,15 @@
     cursor: pointer;
   }
 
+
+  .category-item {
+    transition: color 0.2s ease;
+  }
+
+  .category-item:hover {
+    color: #E15D05;
+  }
+
   .books-container {
     display: flex;
     gap: 24px;
