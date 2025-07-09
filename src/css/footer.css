@@ -53,8 +53,9 @@
   gap: 16px;
 }
 
-.subscribe-form input[type='email'] {
-  width: 221px;
+.subscribe-form input {
+  width: 100%;
+  max-width: 221px;
   height: 48px;
   border: 1px solid rgba(11, 5, 0, 0.15);
   border-radius: 4px;

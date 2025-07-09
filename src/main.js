@@ -7,7 +7,8 @@ import './js/feedback';
 import './js/events';
 import './js/contact-modal';
 import './js/location.js';
-import './js/scroll.js'
+import './js/scroll.js';
+import './js/footer.js'
 
 import { openBookModal } from './js/book-modal.js';
 
@@ -61,14 +62,3 @@ const randomIndex = Math.floor(Math.random() * quotes.length);
 quoteText.textContent = quotes[randomIndex];
 
 
-const form = document.querySelector('.subscribe-form');
-
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const email = form.elements.email.value.trim();
-
-  console.log('Submitted email:', email);
-
-  form.reset();
-});
