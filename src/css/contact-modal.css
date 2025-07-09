@@ -275,6 +275,10 @@
     font-weight: bold;
 }
 
+.succes-icon-svg{
+    fill: white;
+}
+
 .success-title {
     font-size: 24px;
     font-weight: 700;
