@@ -75,7 +75,6 @@ export function openBookModal(bookData) {
       position: 'topRight',
       timeout: 3000,
       progressBar: true,
-      color: '#e15d05', 
     });
   });
 

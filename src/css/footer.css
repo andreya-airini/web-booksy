@@ -37,6 +37,11 @@
   gap: 32px;
 }
 
+.footer-nav-item:hover,
+.footer-nav-item:focus{
+  opacity: 0.2;
+}
+
 .join-section-title {
   display: flex;
   justify-content: left;
@@ -80,6 +85,13 @@
   height: 48px;
   background-color: transparent;
 }
+
+.subscribe-form button:hover,
+.subscribe-form button:focus{
+  color: aliceblue;
+  background-color: #0b0500;
+}
+
 .required-note {
   display: flex;
   font-weight: 400;
